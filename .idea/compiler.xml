@@ -9,8 +9,8 @@
         <module name="apigateway" />
         <module name="flight" />
         <module name="booking" />
-        <module name="passenger" />
         <module name="buildingblocks" />
+        <module name="passenger" />
       </profile>
     </annotationProcessing>
   </component>
