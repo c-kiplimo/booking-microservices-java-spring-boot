@@ -20,7 +20,7 @@ public interface IEvent {
 
     // Retrieve the unique occurredOn for the instance
     default LocalDateTime getOccurredOn() {
-        return EVENT_OCCURRED.computeIfAbsent(this, _ -> LocalDateTime.now());
+        return EVENT_OCCURRED.computeIfAbsent(this, _ ->  LocalDateTime.now());
     }
 
     default String getEventType() {
