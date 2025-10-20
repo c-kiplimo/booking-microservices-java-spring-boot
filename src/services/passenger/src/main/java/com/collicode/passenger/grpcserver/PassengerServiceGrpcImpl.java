@@ -1,0 +1,36 @@
+package com.collicode.passenger.grpcserver;
+
+
+import com.collicode.buildingblocks.mediator.abstractions.IMediator;
+import com.collicode.passenger.passengers.dtos.PassengerDto;
+import com.collicode.passenger.passengers.features.getpassengerbyid.GetPassengerByIdQuery;
+import io.grpc.stub.StreamObserver;
+import net.devh.boot.grpc.server.service.GrpcService;
+import passenger.Passenger;
+import passenger.PassengerServiceGrpc;
+
+import java.util.UUID;
+
+import static com.collicode.passenger.passengers.features.Mappings.toPassengerResponseDtoGrpc;
+
+
+@GrpcService
+public class PassengerServiceGrpcImpl extends PassengerServiceGrpc.PassengerServiceImplBase {
+
+    private final IMediator mediator;
+
+    public PassengerServiceGrpcImpl(IMediator mediator) {
+        this.mediator = mediator;
+    }
+
+
+    @Override
+    public void getById(Passenger.PassengerRequestDto request, StreamObserver<Passenger.PassengerResponseDto> responseObserver) {
+
+        PassengerDto result = mediator.send(new GetPassengerByIdQuery(UUID.fromString(request.getId())));
+        Passenger.PassengerResponseDto passengerResponseDtoGrpc = toPassengerResponseDtoGrpc(result);
+
+        responseObserver.onNext(passengerResponseDtoGrpc);
+        responseObserver.onCompleted();
+    }
+}
