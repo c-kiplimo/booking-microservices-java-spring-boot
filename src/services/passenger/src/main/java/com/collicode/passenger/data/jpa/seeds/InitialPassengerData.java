@@ -1,10 +1,12 @@
-package io.bookingmicroservices.passenger.data.jpa.seeds;
+package com.collicode.passenger.data.jpa.seeds;
 
-import io.bookingmicroservices.passenger.data.jpa.entities.PassengerEntity;
-import io.bookingmicroservices.passenger.passengers.enums.PassengerType;
-import io.bookingmicroservices.passenger.passengers.valueobjects.Age;
-import io.bookingmicroservices.passenger.passengers.valueobjects.Name;
-import io.bookingmicroservices.passenger.passengers.valueobjects.PassportNumber;
+
+import com.collicode.passenger.data.jpa.entities.PassengerEntity;
+import com.collicode.passenger.passengers.enums.PassengerType;
+import com.collicode.passenger.passengers.valueobjects.Age;
+import com.collicode.passenger.passengers.valueobjects.Name;
+import com.collicode.passenger.passengers.valueobjects.PassportNumber;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

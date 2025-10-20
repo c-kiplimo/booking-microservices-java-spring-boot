@@ -1,6 +1,7 @@
-package io.bookingmicroservices.passenger.passengers.exceptions;
+package com.collicode.passenger.passengers.exceptions;
 
-import buildingblocks.core.exception.ConflictException;
+
+import com.collicode.buildingblocks.core.exception.ConflictException;
 
 public class PassengerAlreadyExistException extends ConflictException {
     public PassengerAlreadyExistException() {

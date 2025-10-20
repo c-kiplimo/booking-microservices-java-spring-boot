@@ -1,4 +1,4 @@
-package io.bookingmicroservices.passenger.passengers.enums;
+package com.collicode.passenger.passengers.enums;
 
 public enum PassengerType {
     Male,

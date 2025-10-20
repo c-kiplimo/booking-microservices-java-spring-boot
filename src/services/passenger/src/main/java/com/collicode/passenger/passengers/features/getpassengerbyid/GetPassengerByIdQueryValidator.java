@@ -1,4 +1,4 @@
-package io.bookingmicroservices.passenger.passengers.features.getpassengerbyid;
+package com.collicode.passenger.passengers.features.getpassengerbyid;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;

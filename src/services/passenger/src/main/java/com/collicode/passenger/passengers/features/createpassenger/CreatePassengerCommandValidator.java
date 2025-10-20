@@ -1,9 +1,11 @@
-package io.bookingmicroservices.passenger.passengers.features.createpassenger;
+package com.collicode.passenger.passengers.features.createpassenger;
 
-import io.bookingmicroservices.passenger.passengers.enums.PassengerType;
+
+import com.collicode.passenger.passengers.enums.PassengerType;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
+
 import java.util.EnumSet;
 
 @Component
@@ -30,7 +32,7 @@ public class CreatePassengerCommandValidator implements Validator {
             errors.rejectValue("age", "age.invalid", "Age must be greater than 0");
         }
 
-        if (command.passportNumber() == null ) {
+        if (command.passportNumber() == null) {
             errors.rejectValue("passportNumber", "passportNumber.required", "PassportNumber is required");
         }
 

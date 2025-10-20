@@ -1,15 +1,18 @@
-package io.bookingmicroservices.passenger.grpcserver;
+package com.collicode.passenger.grpcserver;
 
-import buildingblocks.mediator.abstractions.IMediator;
-import io.bookingmicroservices.passenger.passengers.dtos.PassengerDto;
-import io.bookingmicroservices.passenger.passengers.features.getpassengerbyid.GetPassengerByIdQuery;
+
+import com.collicode.buildingblocks.mediator.abstractions.IMediator;
+import com.collicode.passenger.passengers.dtos.PassengerDto;
+import com.collicode.passenger.passengers.features.getpassengerbyid.GetPassengerByIdQuery;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
-import org.springframework.stereotype.Service;
 import passenger.Passenger;
 import passenger.PassengerServiceGrpc;
+
 import java.util.UUID;
-import static io.bookingmicroservices.passenger.passengers.features.Mappings.toPassengerResponseDtoGrpc;
+
+import static com.collicode.passenger.passengers.features.Mappings.toPassengerResponseDtoGrpc;
+
 
 @GrpcService
 public class PassengerServiceGrpcImpl extends PassengerServiceGrpc.PassengerServiceImplBase {

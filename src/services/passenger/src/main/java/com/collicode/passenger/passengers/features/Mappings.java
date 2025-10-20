@@ -1,14 +1,15 @@
-package io.bookingmicroservices.passenger.passengers.features;
+package com.collicode.passenger.passengers.features;
 
+import com.collicode.passenger.data.jpa.entities.PassengerEntity;
+import com.collicode.passenger.data.mongo.documents.PassengerDocument;
+import com.collicode.passenger.passengers.dtos.PassengerDto;
+import com.collicode.passenger.passengers.enums.PassengerType;
+import com.collicode.passenger.passengers.features.createpassenger.CreatePassengerCommand;
+import com.collicode.passenger.passengers.features.createpassenger.CreatePassengerMongoCommand;
+import com.collicode.passenger.passengers.features.createpassenger.CreatePassengerRequestDto;
+import com.collicode.passenger.passengers.models.Passenger;
 import com.github.f4b6a3.uuid.UuidCreator;
-import io.bookingmicroservices.passenger.data.jpa.entities.PassengerEntity;
-import io.bookingmicroservices.passenger.data.mongo.documents.PassengerDocument;
-import io.bookingmicroservices.passenger.passengers.dtos.PassengerDto;
-import io.bookingmicroservices.passenger.passengers.enums.PassengerType;
-import io.bookingmicroservices.passenger.passengers.features.createpassenger.CreatePassengerCommand;
-import io.bookingmicroservices.passenger.passengers.features.createpassenger.CreatePassengerMongoCommand;
-import io.bookingmicroservices.passenger.passengers.features.createpassenger.CreatePassengerRequestDto;
-import io.bookingmicroservices.passenger.passengers.models.Passenger;
+
 
 public final class Mappings {
 

@@ -1,10 +1,11 @@
-package io.bookingmicroservices.passenger.passengers.features.getpassengerbyid;
+package com.collicode.passenger.passengers.features.getpassengerbyid;
 
-import buildingblocks.mediator.abstractions.queries.IQueryHandler;
-import io.bookingmicroservices.passenger.data.mongo.documents.PassengerDocument;
-import io.bookingmicroservices.passenger.data.mongo.repositories.PassengerReadRepository;
-import io.bookingmicroservices.passenger.passengers.dtos.PassengerDto;
-import io.bookingmicroservices.passenger.passengers.features.Mappings;
+
+import com.collicode.buildingblocks.mediator.abstractions.queries.IQueryHandler;
+import com.collicode.passenger.data.mongo.documents.PassengerDocument;
+import com.collicode.passenger.data.mongo.repositories.PassengerReadRepository;
+import com.collicode.passenger.passengers.dtos.PassengerDto;
+import com.collicode.passenger.passengers.features.Mappings;
 import org.springframework.stereotype.Service;
 
 @Service

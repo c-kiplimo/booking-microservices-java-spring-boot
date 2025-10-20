@@ -1,10 +1,10 @@
-package io.bookingmicroservices.passenger.passengers.features.createpassenger;
+package com.collicode.passenger.passengers.features.createpassenger;
 
-import buildingblocks.core.event.InternalCommand;
-import buildingblocks.mediator.abstractions.commands.ICommand;
-import com.github.f4b6a3.uuid.UuidCreator;
-import io.bookingmicroservices.passenger.passengers.dtos.PassengerDto;
-import io.bookingmicroservices.passenger.passengers.enums.PassengerType;
+
+import com.collicode.buildingblocks.core.event.InternalCommand;
+import com.collicode.buildingblocks.mediator.abstractions.commands.ICommand;
+import com.collicode.passenger.passengers.dtos.PassengerDto;
+import com.collicode.passenger.passengers.enums.PassengerType;
 
 import java.util.UUID;
 

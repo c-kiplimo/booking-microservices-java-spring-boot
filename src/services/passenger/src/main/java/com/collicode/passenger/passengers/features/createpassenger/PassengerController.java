@@ -1,8 +1,9 @@
-package io.bookingmicroservices.passenger.passengers.features.createpassenger;
+package com.collicode.passenger.passengers.features.createpassenger;
 
-import buildingblocks.mediator.abstractions.IMediator;
-import io.bookingmicroservices.passenger.passengers.dtos.PassengerDto;
-import io.bookingmicroservices.passenger.passengers.features.Mappings;
+
+import com.collicode.buildingblocks.mediator.abstractions.IMediator;
+import com.collicode.passenger.passengers.dtos.PassengerDto;
+import com.collicode.passenger.passengers.features.Mappings;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;

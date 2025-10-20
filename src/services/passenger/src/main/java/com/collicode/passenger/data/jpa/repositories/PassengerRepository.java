@@ -1,11 +1,10 @@
-package io.bookingmicroservices.passenger.data.jpa.repositories;
+package com.collicode.passenger.data.jpa.repositories;
 
-import io.bookingmicroservices.passenger.data.jpa.entities.PassengerEntity;
-import io.bookingmicroservices.passenger.passengers.features.Mappings;
-import io.bookingmicroservices.passenger.passengers.models.Passenger;
-import jakarta.persistence.EntityManager;
+
+import com.collicode.passenger.data.jpa.entities.PassengerEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
 import java.util.UUID;
 
 

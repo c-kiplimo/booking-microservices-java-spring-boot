@@ -1,11 +1,12 @@
-package io.bookingmicroservices.passenger.passengers.features.createpassenger;
+package com.collicode.passenger.passengers.features.createpassenger;
 
-import buildingblocks.mediator.abstractions.commands.ICommandHandler;
-import buildingblocks.mediator.abstractions.requests.Unit;
-import io.bookingmicroservices.passenger.data.mongo.documents.PassengerDocument;
-import io.bookingmicroservices.passenger.data.mongo.repositories.PassengerReadRepository;
-import io.bookingmicroservices.passenger.passengers.exceptions.PassengerAlreadyExistException;
-import io.bookingmicroservices.passenger.passengers.features.Mappings;
+
+import com.collicode.buildingblocks.mediator.abstractions.commands.ICommandHandler;
+import com.collicode.buildingblocks.mediator.abstractions.requests.Unit;
+import com.collicode.passenger.data.mongo.documents.PassengerDocument;
+import com.collicode.passenger.data.mongo.repositories.PassengerReadRepository;
+import com.collicode.passenger.passengers.exceptions.PassengerAlreadyExistException;
+import com.collicode.passenger.passengers.features.Mappings;
 import org.springframework.stereotype.Service;
 
 @Service

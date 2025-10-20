@@ -1,6 +1,7 @@
-package io.bookingmicroservices.passenger.data.mongo.documents;
+package com.collicode.passenger.data.mongo.documents;
 
-import io.bookingmicroservices.passenger.passengers.enums.PassengerType;
+
+import com.collicode.passenger.passengers.enums.PassengerType;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.UUID;
 
 
@@ -27,7 +29,7 @@ public class PassengerDocument {
     private int age;
     private boolean isDeleted;
 
-    public PassengerDocument(UUID passengerId, String name, String passportNumber , PassengerType passengerType, int age, boolean isDeleted) {
+    public PassengerDocument(UUID passengerId, String name, String passportNumber, PassengerType passengerType, int age, boolean isDeleted) {
         this.passengerId = passengerId;
         this.name = name;
         this.passportNumber = passportNumber;

@@ -1,9 +1,11 @@
-package io.bookingmicroservices.passenger.passengers.features.createpassenger;
+package com.collicode.passenger.passengers.features.createpassenger;
 
-import buildingblocks.core.event.InternalCommand;
-import buildingblocks.mediator.abstractions.commands.ICommand;
-import buildingblocks.mediator.abstractions.requests.Unit;
-import io.bookingmicroservices.passenger.passengers.enums.PassengerType;
+
+import com.collicode.buildingblocks.core.event.InternalCommand;
+import com.collicode.buildingblocks.mediator.abstractions.commands.ICommand;
+import com.collicode.buildingblocks.mediator.abstractions.requests.Unit;
+import com.collicode.passenger.passengers.enums.PassengerType;
+
 import java.util.UUID;
 
 public record CreatePassengerMongoCommand(

@@ -1,10 +1,10 @@
-package io.bookingmicroservices.passenger.data.jpa.entities;
+package com.collicode.passenger.data.jpa.entities;
 
-import buildingblocks.core.model.BaseEntity;
-import io.bookingmicroservices.passenger.passengers.enums.PassengerType;
-import io.bookingmicroservices.passenger.passengers.valueobjects.Age;
-import io.bookingmicroservices.passenger.passengers.valueobjects.Name;
-import io.bookingmicroservices.passenger.passengers.valueobjects.PassportNumber;
+import com.collicode.buildingblocks.core.model.BaseEntity;
+import com.collicode.passenger.passengers.enums.PassengerType;
+import com.collicode.passenger.passengers.valueobjects.Age;
+import com.collicode.passenger.passengers.valueobjects.Name;
+import com.collicode.passenger.passengers.valueobjects.PassportNumber;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

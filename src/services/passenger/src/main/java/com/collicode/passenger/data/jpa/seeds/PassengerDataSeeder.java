@@ -1,6 +1,6 @@
-package io.bookingmicroservices.passenger.data.jpa.seeds;
+package com.collicode.passenger.data.jpa.seeds;
 
-import io.bookingmicroservices.passenger.data.mongo.documents.PassengerDocument;
+import com.collicode.passenger.data.mongo.documents.PassengerDocument;
 import jakarta.persistence.EntityManager;
 import org.slf4j.Logger;
 import org.springframework.boot.CommandLineRunner;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.support.TransactionTemplate;
 
-import static io.bookingmicroservices.passenger.passengers.features.Mappings.toPassengerDocument;
+import static com.collicode.passenger.passengers.features.Mappings.toPassengerDocument;
 
 
 @Component
@@ -43,7 +43,7 @@ public class PassengerDataSeeder implements CommandLineRunner {
                 logger.info("Passenger data seeder is finished.");
 
                 return null;
-            }catch (Exception ex) {
+            } catch (Exception ex) {
                 status.setRollbackOnly();
                 logger.error(ex.getMessage(), ex);
                 throw ex;

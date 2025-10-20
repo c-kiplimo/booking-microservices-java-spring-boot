@@ -1,6 +1,8 @@
-package io.bookingmicroservices.passenger.passengers.dtos;
+package com.collicode.passenger.passengers.dtos;
 
-import io.bookingmicroservices.passenger.passengers.enums.PassengerType;
+
+import com.collicode.passenger.passengers.enums.PassengerType;
+
 import java.util.UUID;
 
 public record PassengerDto(
@@ -9,4 +11,5 @@ public record PassengerDto(
         String passportNumber,
         PassengerType passengerType,
         int age
-) { }
+) {
+}

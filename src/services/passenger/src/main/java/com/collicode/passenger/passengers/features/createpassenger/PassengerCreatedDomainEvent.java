@@ -1,7 +1,9 @@
-package io.bookingmicroservices.passenger.passengers.features.createpassenger;
+package com.collicode.passenger.passengers.features.createpassenger;
 
-import buildingblocks.core.event.DomainEvent;
-import io.bookingmicroservices.passenger.passengers.enums.PassengerType;
+
+import com.collicode.buildingblocks.core.event.DomainEvent;
+import com.collicode.passenger.passengers.enums.PassengerType;
+
 import java.util.UUID;
 
 public record PassengerCreatedDomainEvent(

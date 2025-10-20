@@ -1,7 +1,8 @@
-package io.bookingmicroservices.passenger.passengers.features.getpassengerbyid;
+package com.collicode.passenger.passengers.features.getpassengerbyid;
 
-import buildingblocks.mediator.abstractions.IMediator;
-import io.bookingmicroservices.passenger.passengers.dtos.PassengerDto;
+
+import com.collicode.buildingblocks.mediator.abstractions.IMediator;
+import com.collicode.passenger.passengers.dtos.PassengerDto;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.UUID;
 
 
