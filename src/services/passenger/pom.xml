@@ -14,7 +14,7 @@
 
     <groupId>com.collicode</groupId>
     <artifactId>passenger</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>passenger</name>
     <description>Passenger microservice using Spring Boot + gRPC</description>
 
