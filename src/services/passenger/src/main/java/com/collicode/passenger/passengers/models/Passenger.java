@@ -3,7 +3,10 @@ package com.collicode.passenger.passengers.models;
 
 import com.collicode.buildingblocks.core.model.AggregateRoot;
 import com.collicode.passenger.passengers.enums.PassengerType;
+import com.collicode.passenger.passengers.features.completepassenger.PassengerCompletedDomainEvent;
 import com.collicode.passenger.passengers.features.createpassenger.PassengerCreatedDomainEvent;
+import com.collicode.passenger.passengers.features.deletepassenger.PassengerDeletedDomainEvent;
+import com.collicode.passenger.passengers.features.updatepassenger.PassengerUpdatedDomainEvent;
 import com.collicode.passenger.passengers.valueobjects.Age;
 import com.collicode.passenger.passengers.valueobjects.Name;
 import com.collicode.passenger.passengers.valueobjects.PassengerId;
@@ -58,5 +61,53 @@ public class Passenger extends AggregateRoot<PassengerId> {
         ));
 
         return passenger;
+    }
+
+    public void update(PassengerId passengerId, Name name, PassportNumber passportNumber, PassengerType passengerType, Age age, boolean isDeleted) {
+        this.id = passengerId;
+        this.name = name;
+        this.passportNumber = passportNumber;
+        this.passengerType = passengerType;
+        this.age = age;
+        this.isDeleted = isDeleted;
+
+        this.addDomainEvent(new PassengerUpdatedDomainEvent(
+                passengerId.getPassengerId(),
+                name.getName(),
+                passportNumber.getPassportNumber(),
+                passengerType,
+                age.getAge(),
+                isDeleted
+        ));
+    }
+
+    public void delete() {
+        this.isDeleted = true;
+
+        this.addDomainEvent(new PassengerDeletedDomainEvent(
+                this.id.getPassengerId(),
+                this.name.getName(),
+                this.passportNumber.getPassportNumber(),
+                this.passengerType,
+                this.age.getAge(),
+                true
+        ));
+    }
+
+    public void complete(PassengerId passengerId, Name name, PassportNumber passportNumber, PassengerType passengerType, Age age) {
+        this.id = passengerId;
+        this.name = name;
+        this.passportNumber = passportNumber;
+        this.passengerType = passengerType;
+        this.age = age;
+
+        this.addDomainEvent(new PassengerCompletedDomainEvent(
+                passengerId.getPassengerId(),
+                name.getName(),
+                passportNumber.getPassportNumber(),
+                passengerType,
+                age.getAge(),
+                true
+        ));
     }
 }
