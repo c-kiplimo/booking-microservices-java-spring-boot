@@ -14,10 +14,10 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/booking_write
     username: postgres
-    password: postgres
+    password: smartcode
     driver-class-name: org.postgresql.Driver
   jpa:
-    entity-packages-to-scan: io.bookingmicroservices.booking
+    entity-packages-to-scan: com.collicode.booking
     hibernate:
       ddl-auto: validate
     properties:
