@@ -17,7 +17,7 @@ spring:
     password: smartcode
     driver-class-name: org.postgresql.Driver
   jpa:
-    entity-packages-to-scan: io.bookingmicroservices.flight
+    entity-packages-to-scan: com.collicode.flight
     hibernate:
       ddl-auto: validate
     properties:
